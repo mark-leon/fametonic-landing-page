@@ -14,7 +14,7 @@ const figtree = Figtree({
 
 export default function HeroSection() {
   return (
-    <main className="flex-1 px-4">
+    <main className="flex-1 ">
       <div className="flex flex-col lg:flex-row items-center justify-between ">
         <div className="w-full lg:w-1/2  order-2 md:order-1">
           <h1
@@ -78,7 +78,7 @@ export default function HeroSection() {
               className={`
                 ${figtree.className}
                 w-[320px] h-[40px]
-                px-10 py-2
+                 py-2
                 gap-[10px]
                 rounded-[10px]
                 bg-[#FC004E]
@@ -90,7 +90,7 @@ export default function HeroSection() {
               `}
             >
               GET STARTED
-              <img src="/Vector.png" alt="Arrow" className="w-3 h-3" />
+              <img src="/Vector.png" alt="Arrow" className="w-auto h-auto" />
             </Button>
             <p
               className={`${figtree.className} text-[12px] text-gray-400 mt-2 ml-12 mb-8`}
