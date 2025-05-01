@@ -2,7 +2,6 @@
 import Banner from "@/components/Banner";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   return (

@@ -67,8 +67,8 @@ export default function HeroSection() {
             className={`${figtree.className}   block md:hidden text-xs font-medium text-gray-500 mt-4 text-center`}
           >
             <p>
-              By clicking "Get Started", you agree with Terms and Conditions,
-              Privacy Policy, Subscription Terms
+              {`By clicking "Get Started", you agree with Terms and Conditions,
+              Privacy Policy, Subscription Terms`}
             </p>
             <p className="mt-2">Fametonic © 2025 All Rights Reserved</p>
           </div>
@@ -103,8 +103,8 @@ export default function HeroSection() {
             className={`${figtree.className}  hidden md:block text-xs font-medium text-gray-500 mt-4`}
           >
             <p>
-              By clicking "Get Started", you agree with Terms and Conditions,
-              Privacy Policy, Subscription Terms
+              {`By clicking "Get Started", you agree with Terms and Conditions,
+              Privacy Policy, Subscription Terms`}
             </p>
             <p className="mt-2">Fametonic © 2025 All Rights Reserved</p>
           </div>
