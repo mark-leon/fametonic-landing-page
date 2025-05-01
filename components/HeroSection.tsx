@@ -1,8 +1,6 @@
 "use client";
-import { ArrowRight } from "lucide-react";
+import { Figtree, Urbanist } from "next/font/google";
 import { Button } from "./ui/button";
-import { Urbanist } from "next/font/google";
-import { Figtree } from "next/font/google";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -25,7 +23,7 @@ export default function HeroSection() {
             Want to Turn Social Media Into a Profitable Career?
           </h1>
           <h2
-            className={`${urbanist.className} text-[25px] text-center md:text-left md:text-[35px] font-bold text-cyan-400 [text-shadow:0px_4px_4px_#FC004E]`}
+            className={`${urbanist.className} text-[25px] text-center md:text-left md:text-[35px] font-bold text-[#00E7F9] [text-shadow:0px_4px_4px_#FC004E]`}
           >
             Discover your way to success with Fametonic:
           </h2>
@@ -65,6 +63,15 @@ export default function HeroSection() {
               </span>
             </li>
           </ul>
+          <div
+            className={`${figtree.className}   block md:hidden text-xs font-medium text-gray-500 mt-4 text-center`}
+          >
+            <p>
+              By clicking "Get Started", you agree with Terms and Conditions,
+              Privacy Policy, Subscription Terms
+            </p>
+            <p className="mt-2">Fametonic © 2025 All Rights Reserved</p>
+          </div>
 
           <div className="pt-4">
             <Button
@@ -82,7 +89,8 @@ export default function HeroSection() {
                 flex items-center justify-center
               `}
             >
-              GET STARTED <ArrowRight className="ml-2 h-5 w-5" />
+              GET STARTED
+              <img src="/Vector.png" alt="Arrow" className="w-3 h-3" />
             </Button>
             <p
               className={`${figtree.className} text-[12px] text-gray-400 mt-2 ml-12 mb-8`}
