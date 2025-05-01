@@ -7,26 +7,14 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function Navbar() {
   return (
     <header
       className={cn(
-        "py-4 flex items-center justify-between transition-all duration-300",
-        scrolled && "py-2 bg-black/70 backdrop-blur-md"
+        "py-4 flex items-center justify-between transition-all duration-300"
       )}
     >
-      <div className="flex-1">
+      <div className="flex-1 md:text-left text-center mt-8">
         <Link href="/" className="inline-block">
           <Image
             src="/Group.png"

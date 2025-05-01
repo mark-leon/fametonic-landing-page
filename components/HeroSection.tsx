@@ -1,90 +1,116 @@
 "use client";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
-import ValueProposition from "./ValueProposition";
+import { Button } from "./ui/button";
+import { Urbanist } from "next/font/google";
+import { Figtree } from "next/font/google";
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const figtree = Figtree({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function HeroSection() {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const valueProps = [
-    {
-      icon: "✨",
-      text: "Start growing your influence right away—no waiting required!",
-    },
-    {
-      icon: "✨",
-      text: "Create viral TikToks and Reels step by step with easy-to-follow lessons",
-    },
-    {
-      icon: "✨",
-      text: "Use a Personal AI Worker to boost your content",
-    },
-    {
-      icon: "✨",
-      text: "Learn from expert-led courses designed for aspiring influencers",
-    },
-  ];
-
   return (
-    <section className="py-10 md:py-16">
-      <div className="grid md:grid-cols-2 gap-12 md:gap-8 items-center">
-        <div className="order-2 md:order-1 max-w-xl">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Want to Turn Social Media Into a
+    <main className="flex-1 px-4">
+      <div className="flex flex-col lg:flex-row items-center justify-between ">
+        <div className="w-full lg:w-1/2  order-2 md:order-1">
+          <h1
+            className={`${urbanist.className} text-[25px] text-center md:text-left md:text-[35px] font-bold `}
+          >
+            Want to Turn Social Media Into a Profitable Career?
+          </h1>
+          <h2
+            className={`${urbanist.className} text-[25px] text-center md:text-left md:text-[35px] font-bold text-cyan-400 [text-shadow:0px_4px_4px_#FC004E]`}
+          >
+            Discover your way to success with Fametonic:
           </h2>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Profitable Career?
-          </h2>
-          <p className="text-xl sm:text-2xl font-medium mb-2 text-cyan-400">
-            Discover your way to success
-          </p>
-          <p className="text-xl sm:text-2xl font-medium mb-2 text-cyan-400">
-            with Fametonic:
-          </p>
 
-          <div className="space-y-6 mb-10">
-            {valueProps.map((prop, index) => (
-              <ValueProposition key={index} icon={prop.icon} text={prop.text} />
-            ))}
-          </div>
+          <ul className="space-y-4 my-6">
+            <li className="flex items-start gap-3">
+              <img src="/icon.png" alt="Icon" className="w-6 h-6" />
+              <span
+                className={`${figtree.className} text-base leading-[22px] align-middle`}
+              >
+                Start growing your influence right away—no waiting required!
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="/icon.png" alt="Icon" className="w-6 h-6" />
+              <span
+                className={`${figtree.className} text-base  leading-[22px] align-middle`}
+              >
+                Create viral TikToks and Reels step by step with easy-to-follow
+                lessons
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="/icon.png" alt="Icon" className="w-6 h-6" />
+              <span
+                className={`${figtree.className} text-base eading-[22px] align-middle`}
+              >
+                Use a Personal AI Worker to boost your content
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <img src="/icon.png" alt="Icon" className="w-6 h-6" />
+              <span
+                className={`${figtree.className} text-base  leading-[22px] align-middle`}
+              >
+                Learn from expert-led courses designed for aspiring influencers
+              </span>
+            </li>
+          </ul>
 
-          <div>
-            <button
-              className="relative w-full sm:w-auto bg-gradient-to-r from-pink-600 to-pink-500 text-white font-bold py-4 px-8 rounded-md flex items-center justify-center gap-2 overflow-hidden group transition-all duration-300 hover:shadow-[0_0_20px_rgba(236,72,153,0.5)]"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+          <div className="pt-4">
+            <Button
+              className={`
+                ${figtree.className}
+                w-[320px] h-[40px]
+                px-10 py-2
+                gap-[10px]
+                rounded-[10px]
+                bg-[#FC004E]
+                hover:bg-[#e0003f]
+                text-white font-bold
+                text-[20px]
+                shadow-[2px_2px_10px_0px_#00E7F9]
+                flex items-center justify-center
+              `}
             >
-              <span className="relative z-10">GET STARTED</span>
-              <ArrowRight
-                className={`relative z-10 transition-transform duration-300 ${
-                  isHovered ? "translate-x-1" : ""
-                }`}
-                size={20}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-            <p className="text-sm text-gray-400 mt-2">
+              GET STARTED <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <p
+              className={`${figtree.className} text-[12px] text-gray-400 mt-2 ml-12 mb-8`}
+            >
               1-minute quiz for personalized insights
             </p>
           </div>
 
-          <div className="mt-10 text-xs text-gray-500">
+          <div
+            className={`${figtree.className}  hidden md:block text-xs font-medium text-gray-500 mt-4`}
+          >
             <p>
               By clicking "Get Started", you agree with Terms and Conditions,
               Privacy Policy, Subscription Terms
             </p>
-            <p className="mt-2">Fametonic 2025 All Rights Reserved</p>
+            <p className="mt-2">Fametonic © 2025 All Rights Reserved</p>
           </div>
         </div>
 
-        <div className="order-1 md:order-2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center order-1 md:order-2">
           <img
-            src="/banner.png"
-            alt="Fametonic Banner"
-            className="w-full max-w-md h-auto object-contain"
+            src="/Influe_mobile.jpg"
+            alt="Fametonic App Dashboard"
+            width={666}
+            height={679}
           />
         </div>
       </div>
-    </section>
+    </main>
   );
 }

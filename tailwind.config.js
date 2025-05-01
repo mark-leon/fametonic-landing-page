@@ -3,8 +3,8 @@ module.exports = {
     extend: {
       fontFamily: {
         urbanist: ["Urbanist", "sans-serif"],
+        figtree: ["Figtree", "sans-serif"],
       },
     },
   },
-  // ...rest of your config
 };
